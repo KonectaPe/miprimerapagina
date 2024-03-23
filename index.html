@@ -3,72 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi primera página</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <title>Document</title>
     <script
       src="https://kit.fontawesome.com/3b32407eb2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="contenedor">
-      <header>
-        <a href="./index.html"><i class="fa-solid fa-heart"></i></a>
-        <nav>
-          <input type="checkbox" id="check" />
-          <label for="check">
-            <i class="fa-solid fa-bars"></i>
-          </label>
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Acerca de mí</a></li>
-            <li><a href="#">Trabajos</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main id="seccion-principal">
-        <section class="section-1">
-          <div class="acerca-de">
-            <h2 id="titulo">Acerca de mí</h2>
-            <p class="parrafo-1">
-              ¡Bienvenido a mi página! Aquí, aprenderás más sobre mí.
+    <!-- navegación -->
+    <header>
+      <a href="#">
+        <i class="fa-solid fa-heart"></i>
+      </a>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <ul>
+          <li>
+            <a href="#presentacion">Inicio</a>
+          </li>
+          <li>
+            <a href="#">Acerca de mí</a>
+          </li>
+          <li>
+            <a href="#">Trabajos</a>
+          </li>
+          <li>
+            <a href="#">Servicios</a>
+          </li>
+          <li>
+            <a href="#">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- acerca de mí -->
+      <section id="presentacion" class="acerca-de-mi">
+        <div class="card">
+          <section class="acerca-imagen">&nbsp;</section>
+          <section class="acerca-de">
+            <div class="header">
+              <i class="fa-sharp fa-solid fa-skull"></i>
+            </div>
+            <h1>Deyver Jaliri is a creative director in San Francisco.</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Vivamus integer non suscipit taciti mus etiam at primis tempor
+              sagittis sit, euismod libero facilisi aptent elementum felis
+              blandit cursus gravida sociis erat ante, eleifend lectus nullam
+              dapibus netus feugiat curae curabitur est ad.
             </p>
-            <p class="parrafo-2">
-              Me llamo Deyver, nací en Perú y vivo en Caballito. Me gusta el
-              helado y salir a pasear en días lluviosos. Me encantaría aprender
-              a programar para poder ayudar a las personas a mostrar lo que
-              hacen.
+            <p>
+              Massa curae fringilla porttitor quam sollicitudin iaculis aptent
+              leo ligula euismod dictumst, orci penatibus mauris eros etiam
+              praesent erat volutpat posuere hac. Metus fringilla nec
+              ullamcorper odio aliquam lacinia conubia mauris tempor, etiam
+              ultricies proin quisque lectus sociis id tristique, integer
+              phasellus taciti pretium adipiscing tortor sagittis ligula.
             </p>
-          </div>
-          <div class="acerca-imagen">
-            <img src="./img/hero.jpg" alt="Imagen personal" />
-          </div>
-        </section>
-        <section class="section-2">
-          <img src="./img/carrusel.jpg" alt="Imagen de carrusel" />
-        </section>
-      </main>
-      <footer id="contacto">
-        <div id="footer ">
-          <h3>Contacto</h3>
-          <nav>
-            <ul>
-              <li><a href="">Instagram</a></li>
-              <li><a href="">Tiktok</a></li>
-              <li><a href="">Whatsapp</a></li>
-            </ul>
-          </nav>
+            <div class="footer">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <a href="#">&copy; Deyver Jaliri</a>
+            </div>
+          </section>
         </div>
-      </footer>
-    </div>
+      </section>
+      <section class="tecnologias">
+        <div class="web">
+          <section class="html">
+            <h1>HTML5</h1>
+          </section>
+          <section class="css">
+            <h1>CSS3</h1>
+          </section>
+          <section class="js">
+            <h1>JAVASCRIPT</h1>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>

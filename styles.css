@@ -1,142 +1,223 @@
+:root {
+  --blue-chill-50: #f2f9f9;
+  --blue-chill-100: #ddeff0;
+  --blue-chill-200: #bfe0e2;
+  --blue-chill-300: #92cace;
+  --blue-chill-400: #5faab1;
+  --blue-chill-500: #438e96;
+  --blue-chill-600: #3b757f;
+  --blue-chill-700: #356169;
+  --blue-chill-800: #325158;
+  --blue-chill-900: #2d464c;
+  --blue-chill-950: #1a2c32;
+  --white: #ffffff;
+  --gray: #999999;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  background-color: var(--blue-chill-50);
+  scroll-behavior: smooth;
 }
 
-ol,
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
+/* navegación */
 
 header {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   align-items: center;
-  padding: 1rem 1rem 1rem 0.5rem;
-  background-color: #4f4544;
+  background-color: var(--blue-chill-950);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
 }
 
-header nav input,
+header a i,
+header ul a,
+header nav label i {
+  color: var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 header nav label {
   display: none;
 }
 
-header nav label i {
-  color: white;
-}
-
-header a i {
-  color: yellow;
-  font-size: 2em;
-}
-
 header nav ul {
-  display: flex;
-  gap: 1.1rem;
-}
-
-header nav ul a {
-  color: white;
-}
-
-.section-1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 550px;
-  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+header nav input {
+  display: none;
+}
+
+/* acerca de mí */
+
+.card {
+  display: flex;
+  background-color: var(--white);
+  width: 75%;
+  margin: 5rem auto;
+  margin-bottom: 2rem;
+}
+
+.card .acerca-imagen {
+  background-image: url("./img/acerca-imagen.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 35%;
+}
+
+.card .acerca-de {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   gap: 2rem;
-  padding: 1rem;
+  width: 65%;
+  padding: 3.5rem;
 }
 
-.acerca-de {
-  text-align: right;
-  width: 100%;
+.card .acerca-de .header {
+  font-size: 3rem;
+  color: var(--blue-chill-950);
 }
 
-.acerca-imagen {
-  width: 50%;
+.card h1 {
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.acerca-imagen img {
-  width: 100%;
+.card p {
+  color: var(--gray);
+  font-size: 0.9em;
+  line-height: 1.5rem;
 }
 
-.section-2 {
-  width: 100%;
-  height: 60vh;
+.card .acerca-de .footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
-.section-2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card .acerca-de .footer ul i {
+  color: var(--gray);
+  font-size: 1.2em;
+  transition: color 0.5s ease;
 }
 
-footer {
-  background-color: #4f4544;
+.card .acerca-de .footer ul i:hover {
+  color: var(--blue-chill-950);
+}
+
+.card .acerca-de .copyright a {
+  color: var(--gray);
+  font-size: 0.9em;
+  transition: color 0.5s ease;
+}
+
+.card .acerca-de .copyright a:hover {
+  color: var(--blue-chill-950);
+}
+
+/* tecnologías */
+
+.tecnologias {
   display: flex;
   justify-content: center;
-  padding: 0.5rem;
+  width: 100%;
+  background-image: url("./img/fondo-dev.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-footer h3 {
-  color: yellow;
+.web {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem;
+  width: 100%;
+  padding: 5rem;
 }
 
-footer nav ul {
-  margin: 0;
-  padding: 0;
+.web h1 {
+  cursor: pointer;
+  background-color: yellow;
 }
 
-footer nav ul li {
-  line-height: 2;
-  text-align: center;
+.web section:nth-child(1) {
+  transform: rotate(-10deg);
 }
 
-footer nav ul li a {
-  color: white;
+.web section:nth-child(3) {
+  transform: rotate(10deg);
 }
 
 @media (max-width: 768px) {
-  header nav ul {
-    display: none;
+  /* navegación */
+  header {
+    padding: 0.5rem;
   }
 
   header nav label {
     display: block;
   }
-  .section-1 {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-  }
 
-  .acerca-de {
-    width: 100%;
-    text-align: center;
-  }
-
-  .acerca-imagen {
+  header nav ul {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    position: fixed;
     width: 100%;
+    height: 100%;
+    left: 100%;
+    background-color: var(--blue-chill-900);
+    transition: left 1s ease;
+    margin: 0.5rem 0;
+    z-index: 100;
+  }
+  #check:checked ~ ul {
+    left: 0;
   }
 
-  .acerca-imagen img {
+  /* acerca de mí */
+
+  .card {
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem auto;
+  }
+  .card .acerca-imagen {
+    width: 100%;
     height: 300px;
-    width: 200px;
+  }
+  .card .acerca-de {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .card .acerca-de .footer ul {
+    gap: 2rem;
   }
 }
